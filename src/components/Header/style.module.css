@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 327px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 38.5px;
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.themeTitle {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.themeImg {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 573px;
+  }
+}

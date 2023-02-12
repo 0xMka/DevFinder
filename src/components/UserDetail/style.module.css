@@ -1,0 +1,61 @@
+.contain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 185px;
+  height: 127px;
+  margin-top: 24px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.iconLocation {
+  width: 13.75px;
+  height: 20px;
+  margin-left: 6.25px;
+}
+
+.iconWebsite {
+  width: 20px;
+  height: 20px;
+}
+
+.iconTwitter {
+  width: 20px;
+  height: 16.25px;
+}
+
+.iconCompany {
+  width: 20px;
+  height: 20px;
+}
+
+.detail {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.25px;
+}
+
+@media (min-width: 768px) {
+  .contain {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 469px;
+    height: 63px;
+    margin-top: 30px;
+  }
+
+  .detail {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
