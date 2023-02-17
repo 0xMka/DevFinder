@@ -14,7 +14,7 @@ export function UserDetail({ user }) {
   }
 
   return (
-    <div className={s.contain}>
+    <div className={s.container}>
       <div className={s.main}>
         <img className={s.iconLocation} src={IconLocation} />
         <span className={s.detail}>{getInfo(user.location)}</span>

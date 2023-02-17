@@ -1,4 +1,4 @@
-.content {
+.container {
   text-align: start;
   font-size: 13px;
   font-weight: 400;
@@ -7,7 +7,7 @@
 }
 
 @media (min-width: 768px) {
-  .content {
+  .container {
     font-size: 15px;
     line-height: 25px;
   }

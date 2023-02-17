@@ -10,7 +10,7 @@ export function UserRating({ user }) {
         color: THEME[themeMode].textColor,
         backgroundColor: THEME[themeMode].backgroundColorBody,
       }}
-      className={s.contain}
+      className={s.container}
     >
       <div className={s.main}>
         <span className={s.title}>Repos</span>
