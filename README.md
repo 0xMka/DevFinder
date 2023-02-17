@@ -1,3 +1,3 @@
 # DevFinder
 
-visite DEMO https://dev-finder-delta.vercel.app/
+visit DEMO https://dev-finder-delta.vercel.app/
