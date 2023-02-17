@@ -3,7 +3,7 @@ import IconSeach from "../../assets/icon-search.svg";
 import { useContext, useState } from "react";
 import { THEME, ThemeModeContext } from "../../context/ThemeContext";
 
-export function SearchBar({ onSubmit }) {
+export function SearchBar({ onSubmit, notFound }) {
   const { themeMode } = useContext(ThemeModeContext);
   const [inputValue, setInputValue] = useState("");
 
@@ -33,8 +33,8 @@ export function SearchBar({ onSubmit }) {
         onChange={(e) => setInputValue(e.target.value)}
         type="text"
         placeholder="Search GitHub username…"
-        maxLength="25"
       />
+      {notFound && <span className={s.messageError}>No Results</span>}
       <button className={s.buttonSearch} type="submit" onClick={handleClick}>
         Search
       </button>

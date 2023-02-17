@@ -9,22 +9,31 @@ import { THEME, ThemeModeContext } from "./context/ThemeContext";
 function App() {
   const initialThemeMode = useContext(ThemeModeContext);
   const [themeMode, setThemeMode] = useState(initialThemeMode);
+  const [notFound, setNotFound] = useState(false);
 
-  const [user, setUser] = useState("octocat");
+  const [user, setUser] = useState("0xMka");
   const [currentUserGitHub, setCurrentUserGitHub] = useState();
 
   async function fetchUserGitHub(user) {
-    const callUser = await GitHubAPI.fetchUsers(user);
-    if (callUser !== undefined) {
-      setCurrentUserGitHub(callUser);
+    try {
+      const callUser = await GitHubAPI.fetchUsers(user);
+      if (callUser !== undefined) {
+        setCurrentUserGitHub(callUser);
+        setNotFound(false);
+      }
+    } catch (error) {
+      console.error("Une erreur est survenue : ", error);
+      setNotFound(true);
+
+      setTimeout(() => {
+        setNotFound(false);
+      }, 2000);
     }
   }
 
   useEffect(() => {
     fetchUserGitHub(user);
   }, [user]);
-
-  // console.log(currentUserGitHub);
 
   return (
     <ThemeModeContext.Provider value={{ themeMode, setThemeMode }}>
@@ -36,7 +45,7 @@ function App() {
         className={s.container}
       >
         <Header title="devfinder" />
-        <SearchBar onSubmit={setUser} />
+        <SearchBar onSubmit={setUser} notFound={notFound} />
         {currentUserGitHub && <CardGitHubUser user={currentUserGitHub} />}
       </div>
     </ThemeModeContext.Provider>

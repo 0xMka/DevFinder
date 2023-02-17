@@ -7,7 +7,7 @@
 }
 
 input {
-  width: 280px;
+  width: 176px;
   height: 58px;
   font-size: 13px;
   font-weight: 400;
@@ -17,6 +17,8 @@ input {
   border-radius: 15px;
   margin-bottom: 8px;
   padding-left: 45px;
+  padding-right: 106px;
+  overflow: hidden;
 }
 
 input:focus {
@@ -45,6 +47,15 @@ input:focus {
   background-color: #60abff;
 }
 
+.messageError {
+  position: absolute;
+  margin-top: 18px;
+  margin-left: -196px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #f74646;
+}
 @media (min-width: 768px) {
   .img {
     width: 20px;
@@ -53,7 +64,7 @@ input:focus {
   }
 
   input {
-    width: 491px;
+    width: 387px;
     height: 58px;
     font-size: 18px;
     line-height: 25px;
