@@ -33,7 +33,7 @@
 }
 
 @media (min-width: 768px) {
-  .contain {
+  .container {
     width: 493px;
     height: 85px;
     margin-top: 32px;
